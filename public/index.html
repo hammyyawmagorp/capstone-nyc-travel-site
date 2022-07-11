@@ -20,13 +20,13 @@
         <nav id="main-nav" class="main-nav">
 
             <div class="nav-container">
-                <h1 class="nyc-main-h1">NYC</h1>
+                <a href="#"><h1 class="nyc-main-h1">NYC</h1></a>
 
                 <ul class="nav-menu"><br>
                     <li><a href="#" class="nav-btn">HOME</a></li>
-                    <li><a href="#" class="nav-btn">WEATHER</a></li>
-                    <li><a href="#" class="nav-btn">AIRPORT?</a> </li>
-                    <li><a href="#" class="nav-btn">ATTRACTIONS</a></li><br>
+                    <li><a href="#section-page-three" class="nav-btn">WEATHER</a></li>
+                    <li><a href="#section-page-four" class="nav-btn">AIRPORT?</a> </li>
+                    <li><a href="#section-page-five" class="nav-btn">ATTRACTIONS</a></li><br>
                 </ul>
                 <div class="hamburger">
                     <span></span>
@@ -95,7 +95,7 @@
                 </div>
               </div>
     </section><br>
-    <section class="section-page-three">
+    <section class="section-page-three"><a name="section-page-three"></a>
         <h2 class="third-page-heading"> WEATHER</h2>
         <div class='page-three-wrapper'>
             <div class='row-weather-page'>
@@ -116,7 +116,10 @@
                       When will you visit?
                   </div>
                   <form>
-                  <input class="weather-dates-input" type="date" id="weather-dates" name="visiting-dates" min="2022-07-01" max="2028-07-01"></form>
+                  <input class="weather-dates-input" type="date" id="weather-dates" name="visiting-dates" min="2022-07-01" max="2028-07-01">
+                  <input class="submit-btn-dates" type ="submit" id="submit-zip" name="submit-zip" value="submit">
+                </form>
+
                     
                 </div>
                 <div class='weather-column'>
@@ -127,7 +130,7 @@
               </div>
            </div>
     </section>
-    <section class="section-page-four">
+    <section class="section-page-four"><a name="section-page-four"></a>
         <h2 class="fourth-page-heading"> AIRPORT?</h2>
 
         <div class="page-four-wrapper">
@@ -136,7 +139,7 @@
                 <div class="zip-code-column">
                   Enter the zip-code of your accomadations:<br>
                   <form class="zip-code-form"><input class="zip-code-box" id="zip" name="zip" type="number">
-                  <input class="submit-btn" type ="submit" id="submit-zip" name="submit-zip" value="submit"><br></form>
+                  <input class="submit-btn-zcode" type ="submit" id="submit-zip" name="submit-zip" value="submit"><br></form>
                 </div>
               </div>
             </div>
@@ -150,9 +153,186 @@
             </div>
           </div>
     </section>
-    <section class="section-page-five">
+    <section class="section-page-five"><a name="section-page-five"></a>
         <h2 class="fifth-page-heading"> ATTRACTIONS</h2>
 
+        <div class='page-five-wrapper'>
+            <div class='attractions-row'>
+              <div class='att-column-main'>
+                <div class="wrapper att-column-two">
+                    <div class="see-sites-txt">CLICK TO TOGGLE THE SITES:</div><br>
+                    <div class="menu">
+                        <select name="name" id="name">
+                            <option value="empirestatebuilding">Empire State Building</option>
+                            <option value="met">MET Museum of Art</option>
+                            <option value="centralpark">Central Park</option>
+                            <option value="brooklynbridge">Brooklyn Bridge</option>
+                            <option value="brooklynbotanicgarden">Botanic Garden</option>
+                            <option value="barclayscenter">Barclays Center</option>
+                            <option value="queensmuseum">Queens Museum</option>
+                            <option value="nyhallofscience">NY Hall of Science</option>
+                            <option value="citifield">Citi Field</option>
+                            <option value="yankeestadium">Yankee Stadium</option>
+                            <option value="bronxzoo">Bronx Zoo</option>
+                            <option value="pelhambaypark">Pelham Bay Park</option>
+                            <option value="statenislandmuseum">S.I Museum</option>
+                            <option value="fortwadsworth">Fort Wadsworth</option>
+                            <option value="statenislandferry">Staten Island Ferry</option>
+                        </select>
+                    </div>
+                
+                <div class="content">
+                    <div id="empirestatebuilding" class="data">
+                        <p class="attr-image"><img src="images/estatebuilding.jpeg"></p>
+                        <p><b>Site</b><span>Empire State Building</span></p>
+                        <p><b>Type</b><span>Historical Building</span></p>
+                        <p><b>Borough</b><span>Manhattan</span></p>
+                        <p><b>Address</b><span>20 W 34th Street, New York, NY 10001</span></p>
+                        <p><b>Website</b><a href="https://www.esbnyc.com/"><span>esbnyc.com</span></a></p>
+                        <p><b>Phone Number</b><span>(212) 736-3100</span></p>
+                    </div>
+                    <div id="met" class="data">
+                        <p class="attr-image"><img src="images/met.jpeg"></p>
+                        <p><b>Site</b><span>The Metropolitan Museum of Art</span></p>
+                        <p><b>Type</b><span>Museum</span></p>
+                        <p><b>Borough</b><span>Manhattan</span></p>
+                        <p><b>Address</b><span>1000 5th Ave, New York, NY 10028</span></p>
+                        <p><b>Website</b><a href="https://www.metmuseum.org/"><span>metmuseum.org</span></a></p>
+                        <p><b>Phone Number</b><span>(212) 535-7710</span></p>
+                    </div>
+                    <div id="centralpark" class="data">
+                        <p class="attr-image"><img src="images/centralpark.jpeg"></p>
+                        <p><b>Site</b><span>Central Park</span></p>
+                        <p><b>Type</b><span>Park/Garden</span></p>
+                        <p><b>Borough</b><span>Manhattan</span></p>
+                        <p><b>Address</b><span>Central Park, New York, NY</span></p>
+                        <p><b>Website</b><a href="https://www.centralparknyc.org/"><span>centralparknyc.org</span></a></p>
+                        <p><b>Phone Number</b><span>(212) 310-6600</span></p>
+                    </div>
+                    <div id="brooklynbridge" class="data">
+                        <p class="attr-image"><img src="images/brooklyn-bridge.jpeg"></p>
+                        <p><b>Site</b><span>Brooklyn Bridge</span></p>
+                        <p><b>Type</b><span>Historic Bridge</span></p>
+                        <p><b>Borough</b><span>Brooklyn</span></p>
+                        <p><b>Address</b><span>334 Furman Street, Brooklyn, NY 11201</span></p>
+                        <p><b>Website</b><a href="https://nyc.gov/html/dot/html/infrastructure/brooklyn-bridge"><span>nyc.gov/brooklyn-bridge</span></a></p>
+                        <p><b>Phone Number</b><span>(718) 222-9939 </span></p>
+                    </div>
+                    <div id="brooklynbotanicgarden" class="data">
+                        <p class="attr-image"><img src="images/brooklynbotanicgarden.jpeg"></p>
+                        <p><b>Site</b><span>Brooklyn Botanic Garden</span></p>
+                        <p><b>Type</b><span>Park/Garden</span></p>
+                        <p><b>Borough</b><span>Brooklyn</span></p>
+                        <p><b>Address</b><span> 990 Washington Ave, Brooklyn, NY 11225</span></p>
+                        <p><b>Website</b><a href="https://www.bbg.org/"><span>bbg.org</span></a></p>
+                        <p><b>Phone Number</b><span>(718) 623-7200</span></p>
+                    </div>
+                    <div id="barclayscenter" class="data">
+                        <p class="attr-image"><img src="images/barclays.jpeg"></p>
+                        <p><b>Site</b><span>Barclays Center</span></p>
+                        <p><b>Type</b><span>Basketball Arena</span></p>
+                        <p><b>Borough</b><span>Brooklyn</span></p>
+                        <p><b>Address</b><span>620 Atlantic Avenue, Brooklyn, NY 11217</span></p>
+                        <p><b>Website</b><a href="https://www.barclayscenter.com/"><span>barclayscenter.com</span></a></p>
+                        <p><b>Phone Number</b><span>(917) 618-6100</span></p>
+                    </div>
+                    <div id="queensmuseum" class="data">
+                        <p class="attr-image"><img src="images/queensmuseum.jpeg"></p>
+                        <p><b>Site</b><span>Queens Museum</span></p>
+                        <p><b>Type</b><span>Museum</span></p>
+                        <p><b>Borough</b><span>Queens</span></p>
+                        <p><b>Address</b><span>Flushing Meadows Corona Park, New York, NY</span></p>
+                        <p><b>Website</b><a href="https://queensmuseum.org/"><span>queensmuseum.org</span></a></p>
+                        <p><b>Phone Number</b><span>(718) 592-9700</span></p>
+                    </div>
+                    <div id="nyhallofscience" class="data">
+                        <p class="attr-image"><img src="images/nyhallofscience.jpeg"></p>
+                        <p><b>Site</b><span>New York Hall of Science</span></p>
+                        <p><b>Type</b><span>Museum</span></p>
+                        <p><b>Borough</b><span>Queens</span></p>
+                        <p><b>Address</b><span>47-01 111th Street, Queens, NY 11368</span></p>
+                        <p><b>Website</b><a href="https://nysci.org/"><span>nysci.org</span></a></p>
+                        <p><b>Phone Number</b><span>(718) 699-0005</span></p>
+                    </div>
+                    <div id="citifield" class="data">
+                        <p class="attr-image"><img src="images/citifield.jpeg"></p>
+                        <p><b>Site</b><span>Citi Field</span></p>
+                        <p><b>Type</b><span>Baseball Stadium</span></p>
+                        <p><b>Borough</b><span>Queens</span></p>
+                        <p><b>Address</b><span>41 Seaver Way, Queens, NY 11368</span></p>
+                        <p><b>Website</b><a href="https://www.mlb.com/mets/ballpark"><span>mlb.com/mets/ballpark</span></a></p>
+                        <p><b>Phone Number</b><span>(718) 507-8499</span></p>
+                    </div>
+                    <div id="yankeestadium" class="data">
+                        <p class="attr-image"><img src="images/yankeestadium.jpeg"></p>
+                        <p><b>Site</b><span>Yankee Stadium</span></p>
+                        <p><b>Type</b><span>Baseball Stadium</span></p>
+                        <p><b>Borough</b><span>The Bronx</span></p>
+                        <p><b>Address</b><span>1 E 161 Street, The Bronx, NY 10451</span></p>
+                        <p><b>Website</b><a href="https://www.mlb.com/yankees/ballpark"><span>www.mlb.com/yankees/ballpark</span></a></p>
+                        <p><b>Phone Number</b><span>(718) 293-4300</span></p>
+                    </div>
+                    <div id="bronxzoo" class="data">
+                        <p class="attr-image"><img src="images/bronxzoo.jpeg"></p>
+                        <p><b>Site</b><span>Bronx Zoo</span></p>
+                        <p><b>Type</b><span>Zoo</span></p>
+                        <p><b>Borough</b><span>The Bronx</span></p>
+                        <p><b>Address</b><span>2300 Southern Blvd, The Bronx, NY 10460</span></p>
+                        <p><b>Website</b><a href="https://bronxzoo.com/"><span>bronxzoo.com/</span></a></p>
+                        <p><b>Phone Number</b><span>(718) 367-1010
+                        </span></p>
+                    </div>
+                    <div id="pelhambaypark" class="data">
+                        <p class="attr-image"><img src="images/pelhambaypark.jpeg"></p>
+                        <p><b>Site</b><span>Pelham Bay Park</span></p>
+                        <p><b>Type</b><span>Park/Garden</span></p>
+                        <p><b>Borough</b><span>The Bronx</span></p>
+                        <p><b>Address</b><span>Middletown Road & Stadium Avenue, NY 10465</span></p>
+                        <p><b>Website</b><a href="https://www.nycgovparks.org/parks/pelham-bay-park"><span>nycgovparks.org/pelham-bay-park</span></a></p>
+                        <p><b>Phone Number</b><span>(718) 430-1891</span></p>
+                    </div>
+                    <div id="statenislandmuseum" class="data">
+                        <p class="attr-image"><img src="images/statenislandmuseum.jpeg"></p>
+                        <p><b>Site</b><span>Staten Island Museum</span></p>
+                        <p><b>Type</b><span>Museum</span></p>
+                        <p><b>Borough</b><span>Staten Island</span></p>
+                        <p><b>Address</b><span>1000 Richmond Terrace, Staten Island, NY 10301</span></p>
+                        <p><b>Website</b><a href="https://www.statenislandmuseum.org/"><span>statenislandmuseum.org</span></a></p>
+                        <p><b>Phone Number</b><span>(718) 727-1135</span></p>
+                    </div>
+                    <div id="fortwadsworth" class="data">
+                        <p class="attr-image"><img src="images/fortwadsworth.jpeg"></p>
+                        <p><b>Site</b><span>Fort Wadsworth</span></p>
+                        <p><b>Type</b><span>Historical Building</span></p>
+                        <p><b>Borough</b><span>Staten Island</span></p>
+                        <p><b>Address</b><span>Fort Wadsworth Visitor Center, Staten Island, NY 10305</span></p>
+                        <p><b>Website</b><a href="https://www.nps.gov/gate/planyourvisit/index.htm"><span>nps.gov/planyourvisit</span></a></p>
+                        <p><b>Phone Number</b><span>(718) 354-4606</span></p>
+                    </div>
+                    <div id="statenislandferry" class="data">
+                        <p class="attr-image"><img src="images/statenislandferry.jpeg"></p>
+                        <p><b>Site</b><span>Staten Island Ferry</span></p>
+                        <p><b>Type</b><span>Ferry/Boat Ride with Scenic Views</span></p>
+                        <p><b>Borough</b><span>Staten Island</span></p>
+                        <p><b>Address</b><span>1 Bay Street Staten Island NY 10301</span></p>
+                        <p><b>Website</b><a href="https://www.siferry.com/"><span>siferry.com</span></a></p>
+                        <p><b>Phone Number</b><span>(212) NEW-YORK</span></p>
+                    </div>
+                </div>
+            </div>
+                </div>
+              </div>
+            </div>
+            <div class='attractions-row'>
+              <!-- <div class='att-column-main'>
+                <div class='att-column-three'>
+                  Some Text in Row 2, Column One
+                </div>
+              </div> -->
+              <div class='att-column-main'>
+              </div>
+            </div>
+          </div>
 
 
     </section>
