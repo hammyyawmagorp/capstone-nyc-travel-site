@@ -22,12 +22,12 @@
             <div class="nav-container">
                 <a href="#"><h1 class="nyc-main-h1">NYC</h1></a>
 
-                <ul class="nav-menu"><br>
-                    <li><a href="#" class="nav-btn">HOME</a></li>
-                    <li><a href="#section-page-three" class="nav-btn">WEATHER</a></li>
-                    <li><a href="#section-page-four" class="nav-btn">AIRPORT?</a> </li>
-                    <li><a href="#section-page-five" class="nav-btn">ATTRACTIONS</a></li><br>
-                </ul>
+                <div class="nav-menu"><br>
+                    <a href="#" class="nav-btn">HOME</a>
+                    <a href="#section-page-three" class="nav-btn">WEATHER</a>
+                    <a href="#section-page-four" class="nav-btn">AIRPORT?</a>
+                    <a href="#section-page-five" class="nav-btn">ATTRACTIONS</a><br>
+                </div>
                 <div class="hamburger">
                     <span></span>
                     <span></span>
@@ -115,10 +115,10 @@
                   <div class='heading-weather-column-2'>
                       When will you visit?
                   </div>
-                  <form>
+                  <div>
                   <input class="weather-dates-input" type="date" id="weather-dates" name="visiting-dates" min="2022-07-01" max="2028-07-01">
                   <input class="submit-btn-dates" type ="submit" id="submit-zip" name="submit-zip" value="submit">
-                </form>
+                  </div>
 
                     
                 </div>
@@ -138,8 +138,8 @@
               <div class="airport-column">
                 <div class="zip-code-column">
                   Enter the zip-code of your accomadations:<br>
-                  <form class="zip-code-form"><input class="zip-code-box" id="zip" name="zip" type="number">
-                  <input class="submit-btn-zcode" type ="submit" id="submit-zip" name="submit-zip" value="submit"><br></form>
+                  <div class="zip-code-form"><input class="zip-code-box" id="zip" name="zip" type="number">
+                  <input class="submit-btn-zcode" type ="submit" id="submit-zip" name="submit-zip" value="submit"><br></div>
                 </div>
               </div>
             </div>
@@ -163,6 +163,7 @@
                     <div class="see-sites-txt">CLICK TO TOGGLE THE SITES:</div><br>
                     <div class="menu">
                         <select name="name" id="name">
+                            <option value="click-me">See Sites...</option>
                             <option value="empirestatebuilding">Empire State Building</option>
                             <option value="met">MET Museum of Art</option>
                             <option value="centralpark">Central Park</option>
@@ -323,21 +324,14 @@
                 </div>
               </div>
             </div>
-            <div class='attractions-row'>
-              <!-- <div class='att-column-main'>
-                <div class='att-column-three'>
-                  Some Text in Row 2, Column One
-                </div>
-              </div> -->
-              <div class='att-column-main'>
               </div>
             </div>
-          </div>
-
 
     </section>
 
+    <script src="main.js"></script>
     <script src="index.js"></script>
+    <script src="controller.js"></script>
 </body>
 
 </html>

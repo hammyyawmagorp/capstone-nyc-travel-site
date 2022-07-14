@@ -12,13 +12,11 @@ document.querySelectorAll('.nav-btn').forEach(n => n.addEventListener('click', (
     navMenu.classList.remove('is-active');
 }))
 
-document.addEventListener("ready", function(){
-    console.log("It's Working") 
-        document.querySelector("#name").addEventListener("change", function(){
-            console.log("It's Working Again") 
+        document.querySelector("#name").addEventListener("change", function(){ 
             document.querySelectorAll(".data").forEach(function(div){
             div.style.display = "none";
         })
     document.querySelector("#" + this.value).style.display = "block";
 })
-})
+document.querySelector("#name"). dispatchEvent(new Event("change"));
+
