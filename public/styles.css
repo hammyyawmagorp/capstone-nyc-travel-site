@@ -300,7 +300,7 @@ li {
     flex-basis: 100%;
     flex: 1;
   }
-  .temperature-column {
+  .tempColumn {
     height: 100px;
     width: 800px;
     font-size: 50px;
@@ -340,7 +340,7 @@ li {
     width: 800px;
     font-size: 50px;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 100px;
     padding-bottom: 70px;
     line-height: 50px;
     font-size: 35px;
@@ -375,7 +375,7 @@ border-radius: 20px;
     width: 800px;
     font-size: 50px;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 100px;
     padding-bottom: 70px;
     line-height: 50px;
     font-size: 35px;

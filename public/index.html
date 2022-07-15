@@ -11,6 +11,7 @@
     <meta name="NYC Travel Planner Page" content="This website helps travellers plan their trips to New York City">
     <title>Take Me to NYC Travel Planner</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
 <body class="home">
@@ -105,8 +106,8 @@
                 </div>
               </div>
               <div class='weather-column'>
-                <div class='temperature-column'>
-                  80° and Sunny
+                <div class='tempColumn'>
+                  <h3 id="currentTemp"></h3>
                 </div>
               </div>
             </div>
@@ -116,15 +117,15 @@
                       When will you visit?
                   </div>
                   <div>
-                  <input class="weather-dates-input" type="date" id="weather-dates" name="visiting-dates" min="2022-07-01" max="2028-07-01">
+                    <form id="datesForm">
+                  <input class="weatherDatesInput" type="date" id="weatherDates" name="visitingDates" min="2022-07-01" max="2028-07-01">
                   <input class="submit-btn-dates" type ="submit" id="submit-zip" name="submit-zip" value="submit">
+                    </form>
                   </div>
-
-                    
                 </div>
                 <div class='weather-column'>
                   <div class='temperature-dates-column-2'>
-                    It will be 50°
+                    <h3 id="forecastedTemp"></h3>
                   </div>
                 </div>
               </div>
@@ -138,8 +139,8 @@
               <div class="airport-column">
                 <div class="zip-code-column">
                   Enter the zip-code of your accomadations:<br>
-                  <div class="zip-code-form"><input class="zip-code-box" id="zip" name="zip" type="number">
-                  <input class="submit-btn-zcode" type ="submit" id="submit-zip" name="submit-zip" value="submit"><br></div>
+                  <div class="zipCodeForm"><input class="zipCodeBox" id="zip" name="zip" type="number">
+                  <input class="submitBtnZcode" type ="submit" id="submitZip" name="submit-zip" value="submit"><br></div>
                 </div>
               </div>
             </div>
@@ -163,7 +164,7 @@
                     <div class="see-sites-txt">CLICK TO TOGGLE THE SITES:</div><br>
                     <div class="menu">
                         <select name="name" id="name">
-                            <option value="click-me">See Sites...</option>
+                            <option value="click-me" selected>See Sites...</option>
                             <option value="empirestatebuilding">Empire State Building</option>
                             <option value="met">MET Museum of Art</option>
                             <option value="centralpark">Central Park</option>
@@ -183,6 +184,7 @@
                     </div>
                 
                 <div class="content">
+                    <div id="click-me"></div>
                     <div id="empirestatebuilding" class="data">
                         <p class="attr-image"><img src="images/estatebuilding.jpeg"></p>
                         <p><b>Site</b><span>Empire State Building</span></p>
@@ -330,8 +332,6 @@
     </section>
 
     <script src="main.js"></script>
-    <script src="index.js"></script>
-    <script src="controller.js"></script>
 </body>
 
 </html>
