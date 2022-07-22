@@ -1,16 +1,15 @@
+require('dotenv').config()
 const express = require('express');
-const axios = require('axios');
 const app = express();
-app.use(express.json());
-
 const cors = require('cors');
+
+const {SERVER_PORT} = process.env;
+const {seed} = require ('./seed.js');
+const {} = require ('./controller.js');
+
+
+app.use(express.json());
 app.use(cors());
-
-
-const currentWeatherUrl = "https://api.weatherapi.com/v1/current.json?key=fffb84950e714159aa5160418221007&q=new york&aqi=yes"
-// baseUrl = "http://api.weatherapi.com/v1";
-// apiKey = fffb84950e714159aa5160418221007
-
 
 
 
