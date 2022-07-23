@@ -44,7 +44,8 @@ weatherForm.addEventListener('submit', (e) => {
         .then (function(response){
             if (response.data.forecast.forecastday.length === 0){
                 document.querySelector('#forecastedTemp').innerText = `Travel date too far. Check back 15 days before your trip!`;
-            } else {
+            } 
+            else {
                 document.querySelector('#forecastedTemp').innerText = `It will be ${response.data.forecast.forecastday[0].day.avgtemp_c}°C | ${response.data.forecast.forecastday[0].day.avgtemp_f}°F & ${response.data.forecast.forecastday[0].day.condition.text}`
             }
         })
@@ -53,5 +54,38 @@ weatherForm.addEventListener('submit', (e) => {
         });
     console.log(weatherForm.elements.weatherDates.value);
 })
+
+
+
+// ---
+//airport form
+
+const zipCodeForm = document.querySelector('#zipCodeForm');
+
+zipCodeForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (zipCodeForm.elements.zip.value.length < 5 || zipCodeForm.elements.zip.value.length > 5) {
+        alert ('Enter a valid zip code');
+        return
+    }
+
+    getAirport(zipCodeForm.elements.zip.value);
+    
+});
+
+const localUrl = "http://localhost:4000"
+
+function getAirport (zipcode){
+    axios.get (`${localUrl}/airport?zipcode=${zipcode}`)
+    .then((res) => {
+        if (res.data.length === 0){
+            alert ('Please enter a valid NYC Zipcode');
+            return
+        }
+        document.querySelector('.zipCodeResColumn').innerText = `The closest airport to you is: ${res.data[0].airport}`;
+        
+    }).catch(err => document.querySelector('.zipCodeResColumn').innerText = "We'll be right back after these messages"
+)}
+
 
 

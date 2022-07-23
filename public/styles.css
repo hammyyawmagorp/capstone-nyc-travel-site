@@ -14,6 +14,7 @@ html {
     font-family: 'Major Mono Display';
 }
 
+
 .nav-container {
     min-height: 70px;
     margin: 0 auto;
@@ -346,8 +347,12 @@ li {
     font-size: 35px;
     color: #FF6600;
   }
+#datesForm {
+  text-align: center;
+}
 
-  .weather-dates-input{
+
+.weather-dates-input{
 
     text-align: center;
     font-size: 20px;
@@ -358,7 +363,7 @@ li {
     border-radius: 15px;
     
 }
-.submit-btn-dates{
+.submit-btn{
 background-color: #FF924A;
 border: none;
 color: white;
@@ -432,7 +437,7 @@ border-radius: 20px;
     padding-top:20px;
   }
   
-  .zip-code-res-column {
+  .zipCodeResColumn {
   
     height: 100px;
     text-align: center;
@@ -442,23 +447,13 @@ border-radius: 20px;
     padding-top: 50px;
     padding-bottom: 50px;
   }
-  .zip-code-box{
+  .zipCodeBox{
     border: 0.5px solid #FF6600;
     background-color: white;
-    padding: 15px 10px;
+    padding: 5px 5px;
     text-decoration: none;
     border-radius: 15px;
-  }
-  .submit-btn-zcode{
-    background-color: #FF924A;
-    border: none;
-    color: white;
-    font-size:15px;
-    padding: 16px 32px;
-    text-decoration: none;
-    text-align:center;
-    cursor: pointer;
-    border-radius: 20px;
+    width: 100px;
   }
 
   .fifth-page-heading{

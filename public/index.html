@@ -39,7 +39,6 @@
         </nav>
     </header>
 
-
     <div class="title-mains-tmt">
         <h1 class="take-me-to-title">
             Take me to
@@ -116,12 +115,12 @@
                   <div class='heading-weather-column-2'>
                       When will you visit?
                   </div>
-                  <div>
-                    <form id="datesForm">
+                  
+                  <form id="datesForm">
                   <input class="weatherDatesInput" type="date" id="weatherDates" name="visitingDates" min="2022-07-01" max="2028-07-01">
-                  <input class="submit-btn-dates" type ="submit" id="submit-zip" name="submit-zip" value="submit">
-                    </form>
-                  </div>
+                  <input class="submit-btn" type ="submit" id="submit-zip" name="submit-zip" value="submit">
+                  </form>
+               
                 </div>
                 <div class='weather-column'>
                   <div class='temperature-dates-column-2'>
@@ -139,16 +138,16 @@
               <div class="airport-column">
                 <div class="zip-code-column">
                   Enter the zip-code of your accomadations:<br>
-                  <div class="zipCodeForm"><input class="zipCodeBox" id="zip" name="zip" type="number">
-                  <input class="submitBtnZcode" type ="submit" id="submitZip" name="submit-zip" value="submit"><br></div>
+                  <form class="zipCodeForm" id="zipCodeForm">
+                    <input class="zipCodeBox" id="zip" name="zip" type="number">
+                    <input class="submit-btn" type ="submit" id="submitZip" name="submit-zip" value="submit"><br>
+                </form>
                 </div>
               </div>
             </div>
             <div class='airport-zip-row'>
               <div class='airport-column'>
-                <div class='zip-code-res-column'>
-                  The closes airport to you is:<br><br>
-                  <div class="airport-res-txt">JFK International</div>
+                <div class='zipCodeResColumn'>
                 </div>
               </div>
             </div>
