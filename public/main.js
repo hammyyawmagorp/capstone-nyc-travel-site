@@ -1,3 +1,4 @@
+
 // for navbar/hamburger button
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
@@ -65,6 +66,7 @@ const zipCodeForm = document.querySelector('#zipCodeForm');
 zipCodeForm.addEventListener('submit', (e) => {
     e.preventDefault();
     if (zipCodeForm.elements.zip.value.length < 5 || zipCodeForm.elements.zip.value.length > 5) {
+        document.querySelector('.zipCodeResColumn').innerText = "INVALID ZIP CODE";
         alert ('Enter a valid zip code');
         return
     }
@@ -79,13 +81,50 @@ function getAirport (zipcode){
     axios.get (`${localUrl}/airport?zipcode=${zipcode}`)
     .then((res) => {
         if (res.data.length === 0){
+            document.querySelector('.zipCodeResColumn').innerText = "NOT A NY CITY ZIPCODE";
             alert ('Please enter a valid NYC Zipcode');
             return
         }
-        document.querySelector('.zipCodeResColumn').innerText = `The closest airport to you is: ${res.data[0].airport}`;
+        document.querySelector('.zipCodeResColumn').innerText = `The closest airport to your accomadations is: ${res.data[0].airport}`;
         
     }).catch(err => document.querySelector('.zipCodeResColumn').innerText = "We'll be right back after these messages"
 )}
 
+const moreInfoForm = document.querySelector('#moreInfoForm');
+let name = document.querySelector('#the-name');
+let email = document.querySelector('#the-email');
+let phone = document.querySelector('#the-phone');
+let message = document.querySelector('#the-message');
+
+moreInfoForm.addEventListener('submit', (e) =>{
+    e.preventDefault();
+    let formData = {
+        name: name.value,
+        email: email.value,
+        phone: phone.value,
+        message: message.value
+    }
 
 
+    let xhr = new XMLHttpRequest();
+    xhr.open('POST', `${localUrl}/information`);
+    xhr.setRequestHeader('content-type', 'application/json');
+    xhr.onload = function (){
+        if(xhr.responseText = 'success'){
+            name.value = '';
+            email.value = '';
+            phone.value = '';
+            message.value = '';
+            alert('We will reach out soon!');
+        } else {
+            alert('Something Went Wrong!');
+        }
+    
+    }
+    console.log(formData);
+    xhr.send(JSON.stringify(formData));
+
+    // alert('We will reach out soon!');
+    moreInfoForm.reset();
+
+})

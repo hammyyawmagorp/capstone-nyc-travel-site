@@ -267,5 +267,4 @@ module.exports = {
     }).catch(err => console.log('error seeding DB'))
 }
 
-
 };

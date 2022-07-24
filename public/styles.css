@@ -464,7 +464,7 @@ border-radius: 20px;
     text-align: center;
     color: #003585E5;
     -webkit-text-stroke: 1px #FF6600;
-    padding-top: 400px;
+    padding-top: 200px;
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 100px;
@@ -534,11 +534,12 @@ select {
 
 .content{
     margin: 30px 0;
+    padding-bottom: 80px;
 }
 
 .content .data{
     padding: 25px;
-    background-color: #fff;
+    background-color: #e8eaf6;
     border: 2px solid #FF6600;
     border-radius: 8px;
     color: #003585;
@@ -563,4 +564,76 @@ select {
 .attr-image{
     text-align: center;
 
+}
+
+.form-div {
+  text-align: center;
+  color: #003585;
+  font-size: 20px;
+  box-sizing:inherit;
+  background: #e8eaf6;
+  padding: 50px;
+  border-radius: 20px;
+  max-width: 800px;
+  margin: auto;
+
+}
+.moreInfoForm {
+
+  background: white;
+  margin:50px auto;
+  margin-top: 100px;
+  padding:20px;
+ 
+}
+
+.infoh1, .infoP {
+  text-align: center;
+}
+
+.labelMoreInfo{
+  display:block;
+  margin:1em 0 .2em;
+}
+.inputMoreInfo, textarea {
+  display:block;
+  width:100%;
+  font-size:20px;
+  background-color:#fbfbfb;
+  border-radius: 20px;
+}
+
+textarea {
+  min-height: 150px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+
+.form-submit-btn{
+background-color: #003585;
+border: none;
+color: white;
+font-size:15px;
+padding: 5px 5px;
+text-decoration: none;
+text-align:center;
+cursor: pointer;
+border-radius: 20px;
+}
+input:focus,
+input:hover,
+select:focus,
+select:hover,
+textarea:focus,
+textarea:hover{
+  background: #bbd8ff;
+  transition:all .3s ease-out;
+}
+
+input[type=submit]:hover,
+input[type=submit]:focus{
+  background: #E6ECF3;
+  outline:none;
+  transition:all .3s ease-out;
 }
