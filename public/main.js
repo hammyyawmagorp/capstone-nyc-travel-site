@@ -72,6 +72,7 @@ zipCodeForm.addEventListener('submit', (e) => {
     }
 
     getAirport(zipCodeForm.elements.zip.value);
+
     
 });
 
@@ -88,6 +89,7 @@ function getAirport (zipcode){
         document.querySelector('.zipCodeResColumn').innerText = `The closest airport to your accomadations is: ${res.data[0].airport}`;
         
     }).catch(err => document.querySelector('.zipCodeResColumn').innerText = "We'll be right back after these messages"
+
 )}
 
 const moreInfoForm = document.querySelector('#moreInfoForm');
